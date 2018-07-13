@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>SUBWAY 써브웨이</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/subway.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2O/jquery.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="js/subway.js"></script>
+<link href="images/common/subway_favicon.ico?v=1" rel="shortcut icon" type="image/x-icon">
+<script>
+  //가격 콤마찍기
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+</script>
+<style>
+/* #optionmodal .choicepap-wrap {display:none;} */
+#optionmodal .choicepap-bg {position:fixed; top:0; left:0; width: 100%; height:100%; background: rgba(0,0,0,0.5); z-index: 10;}
+#optionmodal .choicepap-bg .choicepap {position: sticky; top:50%; left:50%; transform: translateX(-50%) translateY(-50%); width:50%; height: 200px; background: #fff; border:1px solid #333;}
+#optionmodal .choicepap-bg .choicepap .contents {position: absolute; top:40%; left:50%; transform: translateX(-50%) translateY(-40%); width:100%; text-align: center;}
+#optionmodal .choicepap-bg .choicepap .contents span {color:#de0000; font-size: 2em;}
+#optionmodal .choicepap-bg .choicepap .contents p { color: #292929; font-family: font_ns, sans-serif; font-size: 1.2em; font-weight: bold;}
+#optionmodal .choicepap-bg .choicepap .contents p span {color: #000; font-size: 1.2em; }
+</style>
+</head>
+<body>
+<header>
+  <div id="header" class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h1 class="logo"><a href="main.html">SUBWAY</a></h1>
+      </div>
+    </div>
+  </div>
+</header>
+<section>
+  <div id="container" class="content-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+
+          <div role="tabpanel">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" data-tab="Sandwich" class="active" ><a href="#Sandwich" aria-controls="Sandwich" role="tab" data-toggle="tab">샌드위치</a></li>
+              <li role="presentation" data-tab="MorningMenu"><a href="#MorningMenu" aria-controls="MorningMenu" role="tab" data-toggle="tab">아침메뉴</a></li>
+              <li role="presentation" data-tab="ChoppedSalad"><a href="#ChoppedSalad" aria-controls="ChoppedSalad" role="tab" data-toggle="tab">찹샐러드</a></li>
+              <li role="presentation" data-tab="SidesDrink"><a href="#SidesDrink" aria-controls="SidesDrink" role="tab" data-toggle="tab">사이드&amp;음료</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active in" id="Sandwich">
+                <div class="menu_list_wrapper">
+                  <!-- 상품별 정렬 tab -->
+                  <div class="pd_tab">
+                    <ul>
+          						<li data-tab="all" class="active"><a class="eng" href="#">All</a></li>
+          						<li data-tab="new" ><a href="#">신제품</a></li>
+          						<li data-tab="cl"><a href="#">클래식</a></li>
+          						<li data-tab="fl"><a href="#">프레쉬&amp;라이트</a></li>
+          						<li data-tab="pm"><a href="#">프리미엄</a></li>
+          					</ul>
+          				</div>
+                  <!--// 상품별 정렬 tab -->
+                  <!-- 상품목록 -->
+                  <div class="pd_list_wrapper">
+                    <ul>
+          						<li class="pm new promotion">
+          							<!-- label -->
+          							<div class="label">
+          								<span class="new">NEW</span>
+          								<span class="event">EVENT</span>
+          							</div>
+          							<!--// label -->
+          							<div class="img"><img alt="스파이시 이탈리안 아보카도" src="images/menu/sandwich_pm09.jpg"></div>
+          							<strong class="tit">스파이시 이탈리안 아보카도</strong>
+          							<span class="eng">Spicy Italian Avocado</span>
+          							<span class="cal">540 kcal</span>
+                        <span class="price">5000</span>
+          							<div class="summary">
+          								<p>
+          									풍미 가득 살라미와 페퍼로니에  아보카도가 더해져 더욱 완벽해진 맛의 밸런스<br>(기간한정 ~07.31)
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm09" href="#"></a>
+          						</li>
+          						<li class="pm promotion">
+          							<!-- label -->
+          							<div class="label">
+          								<span class="event">EVENT</span>
+          							</div>
+          							<!--// label -->
+          							<div class="img"><img alt="터키 베이컨 아보카도" src="images/menu/sandwich_pm02.jpg"></div>
+          							<strong class="tit">터키 베이컨 아보카도</strong>
+          							<span class="eng">Turkey Bacon Avocado</span>
+          							<span class="cal">420 kcal</span>
+                        <span class="price">4500</span>
+          							<div class="summary">
+          								<p>
+          									담백한 터키와 바삭한 베이컨 환상조합에<br> 부드러운 아보카도는 신의 한수
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm02" href="#"></a>
+          						</li>
+          						<li class="fl new promotion">
+          							<!-- label -->
+          							<div class="label">
+          								<span class="new">NEW</span>
+          								<span class="event">EVENT</span>
+          							</div>
+          							<!--// label -->
+          							<div class="img"><img alt="베지 아보카도" src="images/menu/sandwich_fl07.jpg"></div>
+          							<strong class="tit">베지 아보카도</strong>
+          							<span class="eng">Veggie Avocado</span>
+          							<span class="cal">290 kcal</span>
+                        <span class="price">6200</span>
+          							<div class="summary">
+          								<p>
+          									7가지 신선한 야채에 신선한 아보카도가 들어가 더욱 풍성하고 건강해진 한끼<br>(기간한정 ~07.31)
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl07" href="#"></a>
+          						</li>
+          						<li class="pm new">
+          							<!-- label -->
+          							<div class="label">
+          								<span class="new">NEW</span>
+          							</div>
+          							<!--// label -->
+          							<div class="img"><img alt="풀드포크" src="images/menu/sandwich_pm08.jpg"></div>
+          							<strong class="tit">풀드포크</strong>
+          							<span class="eng">Pulled Pork</span>
+          							<span class="cal">420 kcal</span>
+                        <span class="price">5300</span>
+          							<div class="summary">
+          								<p>
+          									7시간 저온 훈연한 미국 정통 스타일의<br> 리얼 바비큐 풀드포크는 오직 써브웨이에서
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm08" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="에그마요" src="images/menu/sandwich_cl06.jpg"></div>
+          							<strong class="tit">에그마요</strong>
+          							<span class="eng">Egg Mayo</span>
+          							<span class="cal">480 kcal</span>
+          							<div class="summary">
+          								<p> <!-- 180130 수정 -->
+          									친환경 인증 받은 농장에서 생산된 달걀과<br> 고소한 마요네즈가 만나 더 부드러운 스테디셀러
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl06" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="이탈리안 비엠티" src="images/menu/sandwich_cl01.jpg"></div>
+          							<strong class="tit">이탈리안 비엠티</strong>
+          							<span class="eng">Italian B.M.T</span>
+          							<span class="cal">410 kcal</span>
+          							<div class="summary">
+          								<p>
+          										7시간 숙성된 페퍼로니,<br> 살라미 그리고 햄이 만들어내는 최상의 조화!<br>
+          										전세계가 사랑하는 No.1 베스트셀러!<br>Biggest Meatiest Tastiest, It's B.M.T.!
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl01" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="비엘티" src="images/menu/sandwich_cl02.jpg"></div>
+          							<strong class="tit">비엘티</strong>
+          							<span class="eng">B.L.T</span>
+          							<span class="cal">380 kcal</span>
+          							<div class="summary">
+          								<p>
+          									오리지널 아메리칸 베이컨의 풍미와 바삭함 그대로~
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl02" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="미트볼" src="images/menu/sandwich_cl03.jpg"></div>
+          							<strong class="tit">미트볼</strong>
+          							<span class="eng">Meatball</span> <!-- 180130 수정 -->
+          							<span class="cal">480 kcal</span>
+          							<div class="summary">
+          								<p>
+          									이탈리안 스타일 비프 미트볼에<br> 써브웨이만의 풍부한 토마토 향이 살아있는<br> 마리나라소스를 듬뿍
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl03" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="햄" src="images/menu/sandwich_cl04.jpg"></div>
+          							<strong class="tit">햄</strong>
+          							<span class="eng">Ham</span> <!-- 180130 수정 -->
+          							<span class="cal">290 kcal</span>
+          							<div class="summary">
+          								<p>
+          									기본 중에 기본! 풍부한 햄이 만들어내는<br> 입 안 가득 넘치는 맛의 향연
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl04" href="#"></a>
+          						</li>
+          						<li class="cl">
+          							<div class="img"><img alt="참치" src="images/menu/sandwich_cl05.jpg"></div>
+          							<strong class="tit">참치</strong>
+          							<span class="eng">Tuna</span>
+          							<span class="cal">480 kcal</span>
+          							<div class="summary">
+          								<p>
+          									남녀노소 누구나 좋아하는 담백한 참치와<br> 고소한 마요네즈의 완벽한 조화
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="cl05" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="로티세리 치킨" src="images/menu/sandwich_fl01.jpg"></div>
+          							<strong class="tit">로티세리 치킨</strong>
+          							<span class="eng">Rotisserie Chicken</span>
+          							<span class="cal">350 kcal</span>
+          							<div class="summary">
+          								<p>
+          									촉촉한 바비큐 치킨의 풍미가득.<br> 손으로 찢어 더욱 부드러운 치킨의 혁명
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl01" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="로스트 치킨" src="images/menu/sandwich_fl02.jpg"></div>
+          							<strong class="tit">로스트 치킨</strong>
+          							<span class="eng">Roasted Chicken</span>
+          							<span class="cal">320 kcal</span>
+          							<div class="summary">
+          								<p>
+          									오븐에 구워 담백한 저칼로리 닭가슴살의 건강한 풍미
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl02" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="로스트 비프" src="images/menu/sandwich_fl03.jpg"></div>
+          							<strong class="tit">로스트 비프</strong>
+          							<span class="eng">Roasted Beef</span> <!-- 180130 수정 -->
+          							<span class="cal">320 kcal</span>
+          							<div class="summary">
+          								<p>
+          									청정 호주 쇠고기를 오븐에 구워 더욱 담백하고<br> 풍부한 맛이 살아있는 비프 샌드위치
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl03" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="써브웨이 클럽" src="images/menu/sandwich_fl04.jpg"></div>
+          							<strong class="tit">써브웨이 클럽</strong>
+          							<span class="eng">Subway Club </span>
+          							<span class="cal">310 kcal</span>
+          							<div class="summary">
+          								<p>
+          									명실공히 시그니처 써브!<br> 터키, 비프, 포크 햄의 완벽한 앙상블
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl04" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="터키" src="images/menu/sandwich_fl05.jpg"></div>
+          							<strong class="tit">터키</strong>
+          							<span class="eng">Turkey</span>
+          							<span class="cal">280 kcal</span>
+          							<div class="summary">
+          								<p>
+          									280kcal로 슬림하게 즐기는 오리지날 터키 샌드위치
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl05" href="#"></a>
+          						</li>
+          						<li class="fl">
+          							<div class="img"><img alt="베지" src="images/menu/sandwich_fl06.jpg"></div>
+          							<strong class="tit">베지</strong>
+          							<span class="eng">Veggie Delite</span>
+          							<span class="cal">230 kcal</span>
+          							<div class="summary">
+          								<p>
+          									갓 구운 빵과 신선한 7가지 야채로 즐기는 깔끔한 한끼
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="fl06" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="스테이크 &amp; 치즈" src="images/menu/sandwich_pm01.jpg"></div>
+          							<strong class="tit">스테이크 &amp; 치즈</strong>
+          							<span class="eng">Steak &amp; Cheese </span>
+          							<span class="cal">380 kcal</span>
+          							<div class="summary">
+          								<p>
+          									육즙이 쫙~<br>풍부한 비프 스테이크의 풍미가 입안 한가득
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm01" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="터키 베이컨 아보카도" src="images/menu/sandwich_pm02.jpg"></div>
+          							<strong class="tit">터키 베이컨 아보카도</strong>
+          							<span class="eng">Turkey Bacon Avocado</span>
+          							<span class="cal">420 kcal</span>
+          							<div class="summary">
+          								<p>
+          									담백한 터키와 바삭한 베이컨 환상조합에<br> 부드러운 아보카도는 신의 한수
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm02" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="치킨 베이컨 랜치" src="images/menu/sandwich_pm03.jpg"></div>
+          							<strong class="tit">치킨 베이컨 랜치</strong>
+          							<span class="eng">Chicken &amp; Bacon Ranch</span>
+          							<span class="cal">610 kcal</span>
+          							<div class="summary">
+          								<p>
+          									바삭한 베이컨과 담백한 치킨의 이중주
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm03" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="써브웨이 멜트" src="images/menu/sandwich_pm04.jpg"></div>
+          							<strong class="tit">써브웨이 멜트</strong>
+          							<span class="eng">Subway Melt</span>
+          							<span class="cal">410 kcal</span>
+          							<div class="summary">
+          								<p>
+          									자신있게 추천하는 터키, 햄, 베이컨의<br> 완벽한 맛의 밸런스
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm04" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="터키 베이컨" src="images/menu/sandwich_pm05.jpg"></div>
+          							<strong class="tit">터키 베이컨</strong>
+          							<span class="eng">Turkey Bacon</span>
+          							<span class="cal">360 kcal</span>
+          							<div class="summary">
+          								<p>
+          									담백한 터키와 바삭한 베이컨의 기분 좋은 만남
+          								</p>
+          							</div>
+          							<a class="btn_view" href="sandwich_view_pm05.html"></a>
+          							<a class="btn_view" data-id="pm05" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="스파이시 이탈리안" src="images/menu/sandwich_pm06.jpg"></div>
+          							<strong class="tit">스파이시 이탈리안</strong>
+          							<span class="eng">Spicy Italian</span>
+          							<span class="cal">480 kcal</span>
+          							<div class="summary">
+          								<p>
+          									살라미, 페퍼로니가 입안 한가득!<br> 쏘 핫한 이탈리아의 맛
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm06" href="#"></a>
+          						</li>
+          						<li class="pm">
+          							<div class="img"><img alt="치킨 데리야끼" src="images/menu/sandwich_pm07.jpg"></div>
+          							<strong class="tit">치킨 데리야끼</strong>
+          							<span class="eng">Chicken Teriyaki</span>
+          							<span class="cal">370 kcal</span>
+          							<div class="summary">
+          								<p>
+          									담백한 치킨 스트립에 달콤짭쪼름한 써브웨이 특제<br> 데리야끼 소스와의 환상적인 만남
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="pm07" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="블랙 포레스트햄 &amp; 에그, 치즈" src="images/menu/sandwich_bf01.jpg"></div>
+          							<strong class="tit">블랙 포레스트햄 &amp; 에그, 치즈</strong>
+          							<span class="eng">Black Forest Ham &amp; Egg, Cheese</span>
+          							<span class="cal">400 kcal</span>
+          							<div class="summary">
+          								<p>
+          									푹신한 오믈렛과 햄의 가장 클래식한 조화<br>※아침메뉴 제공시간 : 오전 11시까지
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="bf01" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="웨스턴, 에그 &amp; 치즈" src="images/menu/sandwich_bf02.jpg"></div>
+          							<strong class="tit">웨스턴, 에그 &amp; 치즈</strong>
+          							<span class="eng">Western, Egg &amp; Cheese</span>
+          							<span class="cal">370 kcal</span>
+          							<div class="summary">
+          									<p><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										토마토, 피망, 양파 세가지 야채가 더해져<br> 더욱 신선한 하루 시작<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf02" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="베이컨, 에그 &amp; 치즈" src="images/menu/sandwich_bf03.jpg"></div>
+          							<strong class="tit">베이컨, 에그 &amp; 치즈</strong>
+          							<span class="eng">Bacon, Egg &amp; Cheese</span>
+          							<span class="cal">450 kcal</span>
+          							<div class="summary">
+          									<p> <!-- 180130 수정 --><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										오리지널 아메리칸 베이컨으로<br> 더욱 풍성한 아침 식사<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf03" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="스테이크, 에그 &amp; 치즈" src="images/menu/sandwich_bf04.jpg"></div>
+          							<strong class="tit">스테이크, 에그 &amp; 치즈</strong>
+          							<span class="eng">Steak, Egg &amp; Cheese</span>
+          							<span class="cal">440 kcal</span>
+          							<div class="summary">
+          									<p> <!-- 180130 수정 --><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										육즙 가득 비프 스테이크로 든든한 아침 식사<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf04" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="해쉬브라운" src="images/menu/sandwich_bf05.jpg"></div>
+          							<strong class="tit">해쉬브라운</strong>
+          							<span class="eng">Hash Brown</span>
+          							<span class="cal">147 kcal</span>
+          							<div class="summary">
+          									<p><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										잘게 썬 감자를 노릇하게 구워<br> 바삭하고 쫀득하게 즐기는 모닝 파트너<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf05" href="#"></a>
+          						</li>
+          					</ul>
+          				</div>
+                  <!--// 상품목록 -->
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="MorningMenu">
+                <div class="menu_list_wrapper">
+                  <!-- 상품목록 -->
+                  <div class="pd_list_wrapper">
+                    <ul>
+          						<li class="bf">
+          							<div class="img"><img alt="블랙 포레스트햄 &amp; 에그, 치즈" src="images/menu/sandwich_bf01.jpg"></div>
+          							<strong class="tit">블랙 포레스트햄 &amp; 에그, 치즈</strong>
+          							<span class="eng">Black Forest Ham &amp; Egg, Cheese</span>
+          							<span class="cal">400 kcal</span>
+          							<div class="summary">
+          								<p>
+          									푹신한 오믈렛과 햄의 가장 클래식한 조화<br>※아침메뉴 제공시간 : 오전 11시까지
+          								</p>
+          							</div>
+          							<a class="btn_view" data-id="bf01" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="웨스턴, 에그 &amp; 치즈" src="images/menu/sandwich_bf02.jpg"></div>
+          							<strong class="tit">웨스턴, 에그 &amp; 치즈</strong>
+          							<span class="eng">Western, Egg &amp; Cheese</span>
+          							<span class="cal">370 kcal</span>
+          							<div class="summary">
+          									<p><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										토마토, 피망, 양파 세가지 야채가 더해져<br> 더욱 신선한 하루 시작<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf02" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="베이컨, 에그 &amp; 치즈" src="images/menu/sandwich_bf03.jpg"></div>
+          							<strong class="tit">베이컨, 에그 &amp; 치즈</strong>
+          							<span class="eng">Bacon, Egg &amp; Cheese</span>
+          							<span class="cal">450 kcal</span>
+          							<div class="summary">
+          									<p> <!-- 180130 수정 --><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										오리지널 아메리칸 베이컨으로<br> 더욱 풍성한 아침 식사<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf03" href="#"></a>
+          						</li>
+          						<li class="bf">
+          							<div class="img"><img alt="스테이크, 에그 &amp; 치즈" src="images/menu/sandwich_bf04.jpg"></div>
+          							<strong class="tit">스테이크, 에그 &amp; 치즈</strong>
+          							<span class="eng">Steak, Egg &amp; Cheese</span>
+          							<span class="cal">440 kcal</span>
+          							<div class="summary">
+          									<p> <!-- 180130 수정 --><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										육즙 가득 비프 스테이크로 든든한 아침 식사<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf04" href="#"></a>
+          						</li>
+          						<li class="bf nonop">
+          							<div class="img"><img alt="해쉬브라운" src="images/menu/sandwich_bf05.jpg"></div>
+          							<strong class="tit">해쉬브라운</strong>
+          							<span class="eng">Hash Brown</span>
+          							<span class="cal">147 kcal</span>
+          							<div class="summary">
+          									<p><!-- 2018.01.31 아침메뉴제공시간 추가 -->
+          										잘게 썬 감자를 노릇하게 구워<br> 바삭하고 쫀득하게 즐기는 모닝 파트너<br>
+                                                  ※아침메뉴 제공시간 : 오전 11시까지
+          									</p>
+          							</div>
+          							<a class="btn_view" data-id="bf05" href="#"></a>
+          						</li>
+          					</ul>
+          				</div>
+                  <!--// 상품목록 -->
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="ChoppedSalad">
+                <div class="menu_list_wrapper">
+                  <!-- 상품별 정렬 tab -->
+                  <div class="pd_tab">
+                    <ul>
+        							<li data-tab="all" class="active"><a class="eng" href="all">All</a></li>
+        							<li data-tab="new"><a href="#">신제품</a></li>
+        							<li data-tab="cl"><a href="#">클래식</a></li>
+        							<li data-tab="fl"><a href="#">프레쉬&amp;라이트</a></li>
+        							<li data-tab="pm"><a href="#">프리미엄</a></li>
+        						</ul>
+        					</div>
+                  <!--// 상품별 정렬 tab -->
+                  <!-- 상품목록 -->
+                  <div class="pd_list_wrapper">
+                    <ul>
+        							<li class="pm new">
+        								<!-- label -->
+        								<div class="label">
+        									<span class="new">NEW</span>
+        								</div>
+        								<!--// label -->
+        								<div class="img"><img alt="스파이시 이탈리안 아보카도" src="images/menu/salad_pm09.jpg"></div>
+        								<strong class="tit">스파이시 이탈리안 아보카도</strong>
+        								<span class="eng">Spicy Italian Avocado</span>
+        								<span class="cal">370 kcal</span>
+        								<div class="summary">
+        									<p>
+        										풍미 가득 살라미와 페퍼로니에  아보카도가 더해져 더욱 완벽해진 맛의 밸런스
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="터키 베이컨 아보카도" src="images/menu/salad_pm02.jpg"></div>
+        								<strong class="tit">터키 베이컨 아보카도</strong>
+        								<span class="eng">Turkey Bacon Avocado</span>
+        								<span class="cal">240 kcal</span>
+        								<div class="summary">
+        									<p>
+        										담백한 터키와 바삭한 베이컨 환상조합에<br> 부드러운 아보카도는 신의 한수
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl new">
+        								<!-- label -->
+        								<div class="label">
+        									<span class="new">NEW</span>
+        								</div>
+        								<!--// label -->
+        								<div class="img"><img alt="베지 아보카도" src="images/menu/salad_fl07.jpg"></div>
+        								<strong class="tit">베지 아보카도</strong>
+        								<span class="eng">Veggie Avocado</span>
+        								<span class="cal">120 kcal</span>
+        								<div class="summary">
+        									<p>
+        										7가지 신선한 야채에 신선한 아보카도가 들어가 더욱 풍성하고 건강해진 한끼
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm new">
+        								<!-- label -->
+        								<div class="label">
+        									<span class="new">NEW</span>
+        								</div>
+        								<!--// label -->
+        								<div class="img"><img alt="풀드포크" src="images/menu/salad_pm08.jpg"></div>
+        								<strong class="tit">풀드포크</strong>
+        								<span class="eng">Pulled Pork</span>
+        								<span class="cal">250 kcal</span>
+        								<div class="summary">
+        									<p>
+        										7시간 저온 훈연한 미국 정통바비큐 풀드포크가 가득.<br> 풍미 가득 풀드포크 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+          							<li class="cl">
+        								<div class="img"><img alt="이탈리안 비엠티" src="images/menu/salad_cl01.jpg"></div>
+        								<strong class="tit">이탈리안 비엠티</strong>
+        								<span class="eng">Italian B.M.T</span>
+        								<span class="cal">230 kcal</span>
+        								<div class="summary">
+        									<p>
+        								7시간 숙성된 페퍼로니,<br> 살라미 그리고 햄이 만들어내는 최상의 조화!<br>
+                                        전세계가 사랑하는 No.1 베스트셀러!<br> Biggest Meatiest Tastiest, It's B.M.T. 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="cl">
+        								<div class="img"><img alt="비엘티" src="images/menu/salad_cl02.jpg"></div>
+        								<strong class="tit">비엘티</strong>
+        								<span class="eng">B.L.T</span>
+        								<span class="cal">210 kcal</span>
+        								<div class="summary">
+        									<p>
+        										오리지널 아메리칸 베이컨의 풍미와 바삭함이<br> 찹 샐러드에 그대로
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="cl">
+        								<div class="img"><img alt="미트볼" src="images/menu/salad_cl03.jpg"></div>
+        								<strong class="tit">미트볼</strong>
+        								<span class="eng">Meatball</span>
+        								<span class="cal">310 kcal</span>
+        								<div class="summary">
+        									<p>
+        										이탈리안 스타일 비프 미트볼이 토핑된 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="cl">
+        								<div class="img"><img alt="햄" src="images/menu/salad_cl04.jpg"></div>
+        								<strong class="tit">햄</strong>
+        								<span class="eng">Ham</span>
+        								<span class="cal">110 kcal</span>
+        								<div class="summary">
+        									<p>
+        										기본 중에 기본!<br> 풍부한 햄 토핑 가득 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="cl">
+        								<div class="img"><img alt="참치" src="images/menu/salad_cl05.jpg"></div>
+        								<strong class="tit">참치</strong>
+        								<span class="eng">Tuna</span>
+        								<span class="cal">310 kcal</span>
+        								<div class="summary">
+        									<p>
+        										남녀노소 누구나 좋아하는 담백한 참치와<br> 고소한 마요네즈의 완벽한 조화
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="cl">
+        								<div class="img"><img alt="에그마요" src="images/menu/salad_cl06.jpg"></div>
+        								<strong class="tit">에그마요</strong>
+        								<span class="eng">Egg Mayo</span>
+        								<span class="cal">300 kcal</span>
+        								<div class="summary">
+        									<p> <!-- 180130 수정 -->
+        										친환경 인증 받은 농장에서<br> 생산된 달걀과 고소한 마요네즈가 만나<br> 더 부드러운 에그마요 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="로티세리 치킨" src="images/menu/salad_fl01.jpg"></div>
+        								<strong class="tit">로티세리 치킨</strong>
+        								<span class="eng">Rotisserie Chicken</span>
+        								<span class="cal">170 kcal</span>
+        								<div class="summary">
+        									<p>
+        										촉촉한 바비큐 치킨의 풍미가득.<br> 손으로 찢어 더욱 부드러운 치킨이 찹 샐러드에 쏙
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="로스트 치킨" src="images/menu/salad_fl02.jpg"></div>
+        								<strong class="tit">로스트 치킨</strong>
+        								<span class="eng">Roasted Chicken</span>
+        								<span class="cal">150 kcal</span>
+        								<div class="summary">
+        									<p>
+        										오븐에 구워 담백한 저칼로리 닭가슴살의 건강한 풍미
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="로스트 비프" src="images/menu/salad_fl03.jpg"></div>
+        								<strong class="tit">로스트 비프</strong>
+        								<span class="eng">Roasted beef</span>
+        								<span class="cal">140 kcal</span>
+        								<div class="summary">
+        									<p>
+        										오븐에 구워 더욱 담백한 청정 쇠고기가 가득.<br> 비프 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="써브웨이 클럽" src="images/menu/salad_fl04.jpg"></div>
+        								<strong class="tit">써브웨이 클럽</strong>
+        								<span class="eng">Subway Club </span>
+        								<span class="cal">140 kcal</span>
+        								<div class="summary">
+        									<p>
+        										터키, 비프, 포크 햄의<br> 완벽한 앙상블과 즐기는 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="터키" src="images/menu/salad_fl05.jpg"></div>
+        								<strong class="tit">터키</strong>
+        								<span class="eng">Turkey</span>
+        								<span class="cal">110 kcal</span>
+        								<div class="summary">
+        									<p>
+        										더 슬림하게 즐기자!<br> 오리지날 터키 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="fl">
+        								<div class="img"><img alt="베지" src="images/menu/salad_fl06.jpg"></div>
+        								<strong class="tit">베지</strong>
+        								<span class="eng">Veggie Delite</span>
+        								<span class="cal">60 kcal</span>
+        								<div class="summary">
+        									<p>
+        										7가지 야채만으로도 깔끔한 조화!<br> 기본에 충실한 베지 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="스테이크 &amp; 치즈" src="images/menu/salad_pm01.jpg"></div>
+        								<strong class="tit">스테이크 &amp; 치즈</strong>
+        								<span class="eng">Steak &amp; Cheese </span>
+        								<span class="cal">210 kcal</span>
+        								<div class="summary">
+        									<p>
+        										육즙이 쫙~<br>풍부한 비프 스테이크의 풍미 가득<br> 스테이크치즈 찹 샐러드!
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="터키 베이컨 아보카도" src="images/menu/salad_pm02.jpg"></div>
+        								<strong class="tit">터키 베이컨 아보카도</strong>
+        								<span class="eng">Turkey Bacon Avocado</span>
+        								<span class="cal">240 kcal</span>
+        								<div class="summary">
+        									<p>
+        										담백한 터키와 바삭한 베이컨 환상조합에<br> 부드러운 아보카도는 신의 한수
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="치킨 베이컨 랜치" src="images/menu/salad_pm03.jpg"></div>
+        								<strong class="tit">치킨 베이컨 랜치</strong>
+        								<span class="eng">Chicken &amp; Bacon Ranch</span>
+        								<span class="cal">540 kcal</span>
+        								<div class="summary">
+        									<p>
+        										바삭한 베이컨과 담백한 치킨의 이중주
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="써브웨이 멜트" src="images/menu/salad_pm04.jpg"></div>
+        								<strong class="tit">써브웨이 멜트</strong>
+        								<span class="eng">Subway Melt</span>
+        								<span class="cal">188 kcal</span>
+        								<div class="summary">
+        									<p>
+        										자신있게 추천하는 터키, 햄, 베이컨의 발란스로<br> 완성된 멜트 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="터키 베이컨" src="images/menu/salad_pm05.jpg"></div>
+        								<strong class="tit">터키 베이컨</strong>
+        								<span class="eng">Turkey Bacon</span>
+        								<span class="cal">280 kcal</span>
+        								<div class="summary">
+        									<p>
+        										담백한 터키와 바삭한 베이컨의 기분 좋은 만남
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="스파이시 이탈리안" src="images/menu/salad_pm06.jpg"></div>
+        								<strong class="tit">스파이시 이탈리안</strong>
+        								<span class="eng">Spicy Italian</span>
+        								<span class="cal">310 kcal</span>
+        								<div class="summary">
+        									<p>
+        										살라미, 페퍼로니가 입안 한가득!<br> 진짜 이탈리아의 맛 가득한 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="pm">
+        								<div class="img"><img alt="치킨 데리야끼" src="images/menu/salad_pm07.jpg"></div>
+        								<strong class="tit">치킨 데리야끼</strong>
+        								<span class="eng">Chicken Teriyaki</span>
+        								<span class="cal">230 kcal</span>
+        								<div class="summary">
+        									<p>
+        										담백한 치킨 스트립에 달콤짭쪼름한 써브웨이 특제<br> 데리야끼 소스 토핑으로 더 풍성한 찹 샐러드
+        									</p>
+        								</div>
+        								<a class="btn_view" href="#"></a>
+        							</li>
+        						</ul>
+        					</div>
+                  <!--// 상품목록 -->
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="SidesDrink">
+                <div class="menu_list_wrapper">
+                  <!-- 상품별 정렬 tab -->
+        					<div class="pd_tab">
+        						<ul>
+        							<li data-tab="all" class="active"><a class="eng" href="#">All</a></li>
+        							<li data-tab="sides"><a href="#">사이드메뉴</a></li>
+        							<li data-tab="drink"><a href="#">음료</a></li>
+        						</ul>
+        					</div>
+        					<!--// 상품별 정렬 tab -->
+        					<!-- 상품목록 -->
+        					<div class="pd_list_wrapper">
+        						<ul>
+          							<li class="sides">
+        								<div class="img"><img alt="브로콜리 &amp; 체더치즈 수프" src="images/menu/img_sides_01.jpg"></div>
+        								<strong class="tit">브로콜리 &amp; 체더치즈 수프</strong>
+        								<span class="eng">Broccoli &amp; Cheddar Cheese Soup</span>
+        								<span class="cal">170 kcal</span>
+        								<div class="summary">
+        									<p>
+        										건강한 브로콜리와 짭쪼름한 체다치즈의<br> 환상적인 조합
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="베이컨 포테이토 수프" src="images/menu/img_sides_02.jpg"></div>
+        								<strong class="tit">베이컨 포테이토 수프</strong>
+        								<span class="eng">Bacon Potato Soup</span>
+        								<span class="cal">210 kcal</span>
+        								<div class="summary">
+        									<p>
+        										부드럽고 담백한 감자에 바삭한 베이컨의 찰떡궁합
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="더블 초코칩 쿠키" src="images/menu/img_sides_03.jpg"></div>
+        								<strong class="tit">더블 초코칩 쿠키</strong>
+        								<span class="eng">Double Chocolate Chip</span>
+        								<span class="cal">210 kcal</span>
+        								<div class="summary">
+        									<p>
+        										부드러운 화이트초콜릿과 다크 초콜릿의<br> 절묘한 조화로 더욱 풍부한 달콤함
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="초코칩 쿠키" src="images/menu/img_sides_04.jpg"></div>
+        								<strong class="tit">초코칩 쿠키</strong>
+        								<span class="eng">Chocolate Chip</span>
+        								<span class="cal">200 kcal</span>
+        								<div class="summary">
+        									<p>
+        										알알이 가득한 초코의가장 클래식한 달콤함
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="오트밀 레이즌" src="images/menu/img_sides_05.jpg"></div>
+        								<strong class="tit">오트밀 레이즌</strong>
+        								<span class="eng">Oatmeal Raisin</span>
+        								<span class="cal">200 kcal</span>
+        								<div class="summary">
+        									<p>
+        										캘리포니아 건포도와 귀리에<br> 살짝더해진 계피향의 환상적인 조화
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="라즈베리 치즈케익" src="images/menu/img_sides_06.jpg"></div>
+        								<strong class="tit">라즈베리 치즈케익</strong>
+        								<span class="eng">Raspberry Cheese Cake</span> <!-- 180130 수정 -->
+        								<span class="cal">200 kcal</span>
+        								<div class="summary">
+        									<p>
+        										부드럽고 풍부한 치즈와 새콤달콤 라즈베리의<br> 달콤한 만남
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="화이트 초코 마카다미아" src="images/menu/img_sides_07.jpg"></div>
+        								<strong class="tit">화이트 초코 마카다미아</strong>
+        								<span class="eng">White Choco Macadamia</span>
+        								<span class="cal">220 kcal</span>
+        								<div class="summary">
+        									<p>
+        										고소함 가득한 마카다미아와<br> 달콤한 화이트 초콜릿의 환상 궁합
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="sides">
+        								<div class="img"><img alt="칩" src="images/menu/img_sides_08.jpg"></div>
+        								<strong class="tit">칩</strong>
+        								<span class="eng">Chip</span>
+        								<div class="summary">
+        									<p>
+        										바삭바삭한 칩을 추가해 써브웨이를 즐겨보세요
+        									</p>
+        								</div>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+        							<li class="drink">
+        								<div class="img"><img alt="탄산음료" src="images/menu/img_drink_01.jpg"></div>
+        								<strong class="tit">탄산음료</strong>
+        								<span class="eng">Soda</span>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+                      <li class="drink">
+        								<div class="img"><img alt="커피" src="images/menu/img_drink_02.jpg"></div>
+        								<strong class="tit">커피</strong>
+        								<span class="eng">Coffee</span>
+                        <a class="btn_view" href="#"></a>
+        							</li>
+        						</ul>
+        					</div>
+        					<!--// 상품목록 -->
+        				</div>
+              </div>
+
+              <div class="pagging clearfix">
+                <div class="btn back-btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>이전</div>
+                <div class="pagging-dot">
+                  <nav>
+                    <ul>
+                      <li data-target="1" class="nav-btn nav-page1 active"></li>
+                      <li data-target="2" class="nav-btn nav-page2"></li>
+                      <li data-target="3" class="nav-btn nav-page3"></li>
+                      <li data-target="4" class="nav-btn nav-page4"></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="btn next-btn">다음<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="order-list">
+            <form action="">
+              <table id="tblorder" class="table table-striped">
+                <colgroup>
+                  <col width="40px"/>
+                  <col width="*"/>
+                  <col width="100px"/>
+                  <col width="70px"/>
+                  <col width="60px"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>no</th>
+                    <th>메뉴</th>
+                    <th>수량</th>
+                    <th>가격</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td id="menu">더블 초코칩 쿠키</td>
+                    <td>
+                      <div class="center">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <button id="qty-minus" type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                            </button>
+                          </span>
+                          <input id="CC-prodDetails-quantity" type="text" name="quant" class="form-control input-number" value="1" min="1" max="100">
+                          <span class="input-group-btn">
+                            <button id="qty-plus" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td id="price"></td>
+                    <td id="del" rowspan="2">
+                      <div class="input-group">
+                        <button id="del-btn" type="button" class="btn btn-default" data-type="del" data-field="">
+                          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1-OP</td>
+                    <td colspan="3" id="option">옵션선택해당없음</td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+          <div class="pagging">
+            <nav>
+              <ul class="pager">
+                <li><a href=""><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li>
+                <li><a href=""><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-sm-12 col-md-12">
+              <table class="table">
+                <tr>
+                  <th>주문수량</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>주문금액</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-xs-6 col-sm-12 col-md-12 orderbtn-group">
+              <a href="main.html" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>전체취소</a>
+              <a href="#" class="btn btn-success" id="pay-btn"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>신용카드결제</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="optionmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">STEP2 옵션선택</h4>
+          <div class="choicemenu">
+            <div class="img"><img alt="허니오트" src="images/menu/img_recipe_b01.jpg"></div>
+            <strong class="tit">허니오트</strong>
+            <span class="eng">Honey Oat</span>
+            <span class="cal">230 kcal</span>
+            <span class="price">5200</span>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div id="option" class="option-wrap">
+                <div class="choicepap-wrap">
+                  <div class="choicepap-bg">
+                    <div class="choicepap">
+                      <div class="contents">
+                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                        <p><span class="miss-tit">Bread</span>선택 내용을<br> 다시 확인해주세요</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu_list_wrapper">
+                  <div class="pd_list_wrapper">
+                    <!-- Bread -->
+                    <div class="bread">
+                      <div class="tit">
+      									<span class="num">01</span>
+      									<strong>Bread<span>(찹샐러드 선택 시 제외)</span></strong>
+      								</div>
+                      <ul>
+                        <li class="bread">
+                          <div class="img"><img alt="허니오트" src="images/menu/img_recipe_b01.jpg"></div>
+                          <strong class="tit">허니오트</strong>
+                          <span class="eng">Honey Oat</span>
+                          <span class="cal">230 kcal</span>
+                          <div class="summary">
+                            <p>
+                              고소한 위트빵에 오트밀 가루를 묻혀<br> 고소함과 식감이 두배로
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+
+                        </li>
+                        <li class="bread">
+                          <div class="img"><img alt="하티" src="images/menu/img_recipe_b02.jpg"></div>
+                          <strong class="tit">하티</strong>
+                          <span class="eng">Hearty Italian</span>
+                          <span class="cal">210 kcal</span>
+                          <div class="summary">
+                            <p>
+                              부드러운 화이트빵에 옥수수가루를 묻혀<br> 겉은 바삭하고 고소하며 속은 부드럽게
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="bread">
+                          <div class="img"><img alt="위트" src="images/menu/img_recipe_b03.jpg"></div>
+                          <strong class="tit">위트</strong>
+                          <span class="eng">Wheat</span>
+                          <span class="cal">210 kcal</span>
+                          <div class="summary">
+                            <p>
+                              9가지 곡물로 만들어 건강하고 고소한 맛의 곡물빵
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="bread">
+                          <div class="img"><img alt="파마산 오레가노" src="images/menu/img_recipe_b04.jpg"></div>
+                          <strong class="tit">파마산 오레가노</strong>
+                          <span class="eng">Parmesan Oregano</span>
+                          <span class="cal">210 kcal</span>
+                          <div class="summary">
+                            <p>
+                              부드러운 화이트빵에<br> 파마산 오레가노 시즈닝을 묻혀 허브향 가득
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="bread">
+                          <div class="img"><img alt="화이트" src="images/menu/img_recipe_b05.jpg"></div>
+                          <strong class="tit">화이트</strong>
+                          <span class="eng">White</span>
+                          <span class="cal">210 kcal</span>
+                          <div class="summary">
+                            <p>
+                              가장 클래식한 빵으로 부드러운 식감이 매력 포인트
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="bread">
+                          <div class="img"><img alt="플랫브래드" src="images/menu/img_recipe_b06.jpg"></div>
+                          <strong class="tit">플랫브래드</strong>
+                          <span class="eng">Flat Bread</span>
+                          <span class="cal">230 kcal</span>
+                          <div class="summary">
+                            <p>
+                              이름처럼 납작 모양에 피자도우처럼 쫀득한 맛이 일품
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                      <div class="row">
+                        <div class="bread-option col-xs-6 col-md-6">
+                          <div class="tit">
+          									<span class="num">01-2</span>
+          									<strong>Size</strong>
+          								</div>
+                          <ul>
+                            <li class="size">
+                              <div class="img"><img alt="15cm" src="images/menu/15cm.jpg"></div>
+                              <strong class="tit">15cm</strong>
+                              <!-- <span class="cal">40 kcal</span> -->
+                              <div id="check"><a href="#"></a></div>
+                            </li>
+                            <li class="size">
+                              <div class="img"><img alt="30cm" src="images/menu/30cm.jpg"></div>
+                              <strong class="tit">30cm</strong>
+                              <!-- <span class="cal">40 kcal</span> -->
+                              <div id="check"><a href="#"></a></div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="bread-option col-xs-6 col-md-6">
+                          <div class="tit">
+          									<span class="num">01-3</span>
+          									<strong>Heat Up</strong>
+          								</div>
+                          <ul>
+                            <li class="heatup">
+                              <div class="img"><img alt="heat" src="images/menu/heat.jpg"></div>
+                              <strong class="tit">데워주세요</strong>
+                              <span class="eng">Heat up the bread</span>
+                              <div id="check"><a href="#"></a></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cover"><p>찹샐러드 선택 시 제외</p></div>
+                    </div>
+                    <!-- //Bread -->
+                    <!-- Cheese -->
+                    <div class="cheese">
+                      <div class="tit">
+                        <span class="num">02</span>
+                        <strong>cheese</strong>
+                      </div>
+                      <ul>
+                        <li class="cheese">
+                          <div class="img"><img alt="아메리칸 치즈" src="images/menu/img_recipe_c01.jpg"></div>
+                          <strong class="tit">아메리칸 치즈</strong>
+                          <span class="eng">American Cheese</span>
+                          <span class="cal">40 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="cheese">
+                          <div class="img"><img alt="슈레드 치즈" src="images/menu/img_recipe_c02.jpg"></div>
+                          <strong class="tit">슈레드 치즈</strong>
+                          <span class="eng">Shredded Cheese</span>
+                          <span class="cal">50 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //Cheese -->
+                    <!--Topping  -->
+                    <div class="topping">
+                      <div class="tit">
+                        <span class="num">03</span>
+                        <strong>Topping</strong>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="img"><img alt="더블업" src="images/menu/img_toppping_01.jpg"></div>
+                          <strong class="tit">더블업</strong>
+                          <span class="eng">Double Up</span>
+                          <div class="summary">
+                            <p>주 재료를 2배로<br>더 푸짐하게 즐기세요</p>
+                            <p class="fs13">15cm : 1,500원 / 30cm 3,000원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="에그마요" src="images/menu/img_toppping_02.jpg"></div>
+                          <strong class="tit">에그마요</strong>
+                          <span class="eng">Egg Mayo</span>
+                          <div class="summary">
+                            <p>신선한 달걀과<br>고소한 마요네즈의 만남</p>
+                            <p class="fs13">15cm : 1,500원 / 30cm : 3,000원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="오믈렛" src="images/menu/img_toppping_03.jpg"></div>
+                          <strong class="tit">오믈렛</strong>
+                          <span class="eng">Omelet</span>
+                          <div class="summary">
+                            <p>더 부드럽게, 더 고소하게</p>
+                            <p class="fs13">15cm : 1,100원 / 30cm : 2,200원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="아보카도" src="images/menu/img_toppping_04.jpg"></div>
+                          <strong class="tit">아보카도</strong>
+                          <span class="eng">Avocado</span>
+                          <div class="summary">
+                            <p>숲속의 버터 아보카도로 영양 UP</p>
+                            <p class="fs13">15cm : 1,100원 / 30cm : 2,200원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="베이컨" src="images/menu/img_toppping_05.jpg"></div>
+                          <strong class="tit">베이컨</strong>
+                          <span class="eng">Bacon</span>
+                          <div class="summary">
+                            <p>진한 풍미와 바삭한 베이컨으로<br>특별한 나만의 써브웨이~</p>
+                            <p class="fs13">15cm : 900원 / 30cm : 1,800원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="페퍼로니" src="images/menu/img_toppping_06.jpg"></div>
+                          <strong class="tit">페퍼로니</strong>
+                          <span class="eng">Pepperoni</span>
+                          <div class="summary">
+                            <p>입맛 당기는 페퍼로니로<br>써브웨이를 더 맛있게!</p>
+                            <p class="fs13">15cm : 800원 / 30cm : 1,600원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li>
+                          <div class="img"><img alt="더블치즈" src="images/menu/img_toppping_07.jpg"></div>
+                          <strong class="tit">더블치즈</strong>
+                          <span class="eng">Double Cheese</span>
+                          <div class="summary">
+                            <p>고소한 치즈를 2배로!</p>
+                            <p class="fs13">15cm : 800원 / 30cm : 1,600원</p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //Topping -->
+                    <!-- Vegetable -->
+                    <div class="vegetable">
+                      <div class="tit">
+                        <span class="num">04</span>
+                        <strong>Vegetable</strong>
+                        <div id="allselect"><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 전체선택</a></div>
+                      </div>
+                      <ul>
+                        <li class="vegetable">
+                          <div class="img"><img alt="양상추" src="images/menu/img_recipe_v01.jpg"></div>
+                          <strong class="tit">양상추</strong>
+                          <span class="eng">Lettuce</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="토마토" src="images/menu/img_recipe_v02.jpg"></div>
+                          <strong class="tit">토마토</strong>
+                          <span class="eng">Tomatoes</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="오이" src="images/menu/img_recipe_v03.jpg"></div>
+                          <strong class="tit">오이</strong>
+                          <span class="eng">Cucumbers</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="피망" src="images/menu/img_recipe_v04.jpg"></div>
+                          <strong class="tit">피망</strong>
+                          <span class="eng">Peppers</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="양파" src="images/menu/img_recipe_v05.jpg"></div>
+                          <strong class="tit">양파</strong>
+                          <span class="eng">Red Onions</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="피클" src="images/menu/img_recipe_v06.jpg"></div>
+                          <strong class="tit">피클</strong>
+                          <span class="eng">Pickles</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="올리브" src="images/menu/img_recipe_v07.jpg"></div>
+                          <strong class="tit">올리브</strong>
+                          <span class="eng">Olives</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="vegetable">
+                          <div class="img"><img alt="할라피뇨" src="images/menu/img_recipe_v08.jpg"></div>
+                          <strong class="tit">할라피뇨</strong>
+                          <span class="eng">Jalapenos</span>
+                          <span class="cal">5 kcal</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //Vegetable -->
+                    <!-- Sauce -->
+                    <div class="sauce">
+                      <div class="tit">
+                        <span class="num">05</span>
+                        <strong>Sauce<span>(! 소스는 최대 3가지까지 선택 가능합니다)</span></strong>
+                      </div>
+                      <ul>
+                        <li class="sauce">
+                          <div class="img"><img alt="랜치드레싱" src="images/menu/img_recipe_s01.jpg"></div>
+                          <strong class="tit">랜치드레싱</strong>
+                          <span class="eng">Ranch</span>
+                          <span class="cal">110 kcal</span>
+                          <div class="summary">
+                            <p>
+                              고소한 마요네즈와 레몬즙의 만남!<br> 고소함이 두배!
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="마요네즈" src="images/menu/img_recipe_s02.jpg"></div>
+                          <strong class="tit">마요네즈</strong>
+                          <span class="eng">Mayonnaise</span>
+                          <span class="cal">110 kcal</span>
+                          <div class="summary">
+                            <p>
+                              말이 필요없는 고소함의 대명사, 마요네즈 소스
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="스위트 어니언" src="images/menu/img_recipe_s07.jpg"></div>
+                          <strong class="tit">스위트 어니언</strong>
+                          <span class="eng">Sweet Onion</span>
+                          <span class="cal">40 kcal</span>
+                          <div class="summary">
+                            <p>
+                              써브웨이만의 특제 레시피로 만든 달콤한 양파소스
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="허니 머스터드" src="images/menu/img_recipe_s11.jpg"></div>
+                          <strong class="tit">허니 머스터드</strong>
+                          <span class="eng">Honey Mustard</span>
+                          <span class="cal">30 kcal</span>
+                          <div class="summary">
+                            <p>
+                              겨자씨가 아낌없이 들어간 달콤한 머스터드 소스
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="스위트 칠리" src="images/menu/img_recipe_s12.jpg"></div>
+                          <strong class="tit">스위트 칠리</strong>
+                          <span class="eng">Sweet Chilli</span>
+                          <span class="cal">30 kcal</span>
+                          <div class="summary">
+                            <p>
+                              멕시코 고추와 사과퓨레의 환상적인 조화!<br> 기분좋은 달콤함
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="핫 칠리" src="images/menu/img_recipe_s18.jpg"></div>
+                          <strong class="tit">핫 칠리</strong>
+                          <span class="eng">Hot Chilli</span>
+                          <span class="cal">40 kcal</span>
+                          <div class="summary">
+                            <p>
+                              매운맛을 보고싶다면?<br> 태국고추로 만든 써브웨이만의 매운맛
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="사우스 웨스트" src="images/menu/img_recipe_s09.jpg"></div>
+                          <strong class="tit">사우스 웨스트</strong>
+                          <span class="eng">Chipotle</span>
+                          <span class="cal">100 kcal</span>
+                          <div class="summary">
+                            <p>
+                              태국 고추 핫칠리와 고소한 마요네즈가 만난 이국적인 매콤한 맛
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="머스타드" src="images/menu/img_recipe_s03.jpg"></div>
+                          <strong class="tit">머스타드</strong>
+                          <span class="eng">Yellow Mustard</span>
+                          <span class="cal">5 kcal</span>
+                          <div class="summary">
+                            <p>
+                              겨자씨로 만든 오리지날 머스터드 소스
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="홀스래디쉬" src="images/menu/img_recipe_s04.jpg"></div>
+                          <strong class="tit">디종홀스래디쉬</strong>
+                          <span class="eng">Horseradish</span>
+                          <span class="cal">110 kcal</span>
+                          <div class="summary">
+                            <p>
+                              고소한 마요네즈와 고추냉이의 이색적인 만남!<br> 매니아층을 사로잡은 매력No.1 소스
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="사우전 아일랜드" src="images/menu/img_recipe_s10.jpg"></div>
+                          <strong class="tit">사우전 아일랜드</strong>
+                          <span class="eng">Thousand Island</span>  <!-- 180130 수정 -->
+                          <span class="cal">80 kcal</span>
+                          <div class="summary">
+                            <p>
+                              고소한 마요네즈와 토마토 케첩<br> 그리고 신의한수 피클조각의 환상적인 만남
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="이탈리안 드레싱" src="images/menu/img_recipe_s15.jpg"></div>
+                          <strong class="tit">이탈리안 드레싱</strong>
+                          <span class="eng">Italian Dressing</span>
+                          <span class="cal">80 kcal</span>
+                          <div class="summary">
+                            <p>
+                              샐러드와 잘 어울리며 입맛을 돋워주는 새콤함
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="올리브 오일" src="images/menu/img_recipe_s06.jpg"></div>
+                          <strong class="tit">올리브 오일</strong>
+                          <span class="eng">Olive Oil</span>
+                          <span class="cal">45 kcal</span>
+                          <div class="summary">
+                            <p>
+                              담백하고 깔끔하게 즐기고 싶다면<br> 주저하지 말고 올리브오일
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="레드와인식초" src="images/menu/img_recipe_s05.jpg"></div>
+                          <strong class="tit">레드와인식초</strong>
+                          <span class="eng">Red Wine Vinaigrette</span> <!-- 180130 수정 -->
+                          <span class="cal">40 kcal</span>
+                          <div class="summary">
+                            <p>
+                              레드와인을 발효시켜 풍미가 가득한 식초
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="소금" src="images/menu/img_recipe_s13.jpg"></div>
+                          <strong class="tit">소금</strong>
+                          <span class="eng">Salt</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="후추" src="images/menu/img_recipe_s14.jpg"></div>
+                          <strong class="tit">후추</strong>
+                          <span class="eng">Black Pepper</span>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="sauce">
+                          <div class="img"><img alt="스모크 바비큐 소스" src="images/menu/img_recipe_s17.jpg"></div>
+                          <strong class="tit">스모크 바비큐 소스</strong>
+                          <span class="eng">Smoke BBQ</span>
+                          <div id="check"><a href="#"></a></div>
+                          <div class="summary">
+                            <p>
+                              스모크 향과 달콤한 바비큐의 완벽한 조화<br>(기간한정 02.01~04.31)
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //Sauce -->
+                    <!-- Set -->
+                    <div class="set">
+                      <div class="tit">
+                        <span class="num">05</span>
+                        <strong>Set</strong>
+                      </div>
+                      <ul>
+                        <li class="set">
+                          <div class="img"><img alt="단품" src="images/menu/img_sides_01.jpg"></div>
+                          <strong class="tit">단품</strong>
+                          <span class="eng">Single</span>
+                          <div class="summary">
+                            <p>
+                              건강한 브로콜리와 짭쪼름한 체다치즈의<br> 환상적인 조합
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                        <li class="set">
+                          <div class="img"><img alt="세트" src="images/menu/img_store_order05.png"></div>
+                          <strong class="tit">세트</strong>
+                          <span class="eng">Set</span>
+                          <div class="summary">
+                            <p>
+                              건강한 브로콜리와 짭쪼름한 체다치즈의<br> 환상적인 조합
+                            </p>
+                          </div>
+                          <div id="check"><a href="#"></a></div>
+                        </li>
+                      </ul>
+                      <div class="sides">
+                        <div class="tit">
+                          <span class="num">05-2</span>
+                          <strong>Sides</strong>
+                        </div>
+                        <ul>
+                          <li class="sides">
+                            <div class="img"><img alt="브로콜리 &amp; 체더치즈 수프" src="images/menu/img_sides_01.jpg"></div>
+                            <strong class="tit">브로콜리 &amp; 체더치즈 수프</strong>
+                            <span class="eng">Broccoli &amp; Cheddar Cheese Soup</span>
+                            <span class="cal">170 kcal</span>
+                            <div class="summary">
+                              <p>
+                                건강한 브로콜리와 짭쪼름한 체다치즈의<br> 환상적인 조합
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="베이컨 포테이토 수프" src="images/menu/img_sides_02.jpg"></div>
+                            <strong class="tit">베이컨 포테이토 수프</strong>
+                            <span class="eng">Bacon Potato Soup</span>
+                            <span class="cal">210 kcal</span>
+                            <div class="summary">
+                              <p>
+                                부드럽고 담백한 감자에 바삭한 베이컨의 찰떡궁합
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="더블 초코칩 쿠키" src="images/menu/img_sides_03.jpg"></div>
+                            <strong class="tit">더블 초코칩 쿠키</strong>
+                            <span class="eng">Double Chocolate Chip</span>
+                            <span class="cal">210 kcal</span>
+                            <div class="summary">
+                              <p>
+                                부드러운 화이트초콜릿과 다크 초콜릿의<br> 절묘한 조화로 더욱 풍부한 달콤함
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="초코칩 쿠키" src="images/menu/img_sides_04.jpg"></div>
+                            <strong class="tit">초코칩 쿠키</strong>
+                            <span class="eng">Chocolate Chip</span>
+                            <span class="cal">200 kcal</span>
+                            <div class="summary">
+                              <p>
+                                알알이 가득한 초코의가장 클래식한 달콤함
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="오트밀 레이즌" src="images/menu/img_sides_05.jpg"></div>
+                            <strong class="tit">오트밀 레이즌</strong>
+                            <span class="eng">Oatmeal Raisin</span>
+                            <span class="cal">200 kcal</span>
+                            <div class="summary">
+                              <p>
+                                캘리포니아 건포도와 귀리에<br> 살짝더해진 계피향의 환상적인 조화
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="라즈베리 치즈케익" src="images/menu/img_sides_06.jpg"></div>
+                            <strong class="tit">라즈베리 치즈케익</strong>
+                            <span class="eng">Raspberry Cheese Cake</span> <!-- 180130 수정 -->
+                            <span class="cal">200 kcal</span>
+                            <div class="summary">
+                              <p>
+                                부드럽고 풍부한 치즈와 새콤달콤 라즈베리의<br> 달콤한 만남
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="화이트 초코 마카다미아" src="images/menu/img_sides_07.jpg"></div>
+                            <strong class="tit">화이트 초코 마카다미아</strong>
+                            <span class="eng">White Choco Macadamia</span>
+                            <span class="cal">220 kcal</span>
+                            <div class="summary">
+                              <p>
+                                고소함 가득한 마카다미아와<br> 달콤한 화이트 초콜릿의 환상 궁합
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="sides">
+                            <div class="img"><img alt="칩" src="images/menu/img_sides_08.jpg"></div>
+                            <strong class="tit">칩</strong>
+                            <span class="eng">Chip</span>
+                            <div class="summary">
+                              <p>
+                                바삭바삭한 칩을 추가해 써브웨이를 즐겨보세요
+                              </p>
+                            </div>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                        </ul>
+                        <div class="tit">
+                          <span class="num">05-3</span>
+                          <strong>Drink</strong>
+                        </div>
+                        <ul>
+                          <li class="drink">
+                            <div class="img"><img alt="탄산음료" src="images/menu/img_drink_01.jpg"></div>
+                            <strong class="tit">탄산음료</strong>
+                            <span class="eng">Soda</span>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                          <li class="drink">
+                            <div class="img"><img alt="커피" src="images/menu/img_drink_02.jpg"></div>
+                            <strong class="tit">커피</strong>
+                            <span class="eng">Coffee</span>
+                            <div id="check"><a href="#"></a></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Set -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="option-btn">선택 완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="orderformmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">STEP3 포장</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="container-fluid">
+                <div class="row">
+                  <div id="option" class="option-wrap">
+                    <div class="menu_list_wrapper">
+                      <div class="pd_list_wrapper">
+                        <!-- Packing -->
+                        <div class="packing">
+                          <div class="tit">
+          									<span class="num"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></span>
+          									<strong>packing</strong>
+          								</div>
+                          <div class="exp">
+                            <p>
+                              주문리스트를 확인해 주시고<br>
+                              <span>매장식사</span> 또는 <span>포장</span>을 선택해 주세요
+                            </p>
+                          </div>
+                          <div class="ordersheet-wrap">
+                            <table id="tblorder" class="ordersheet table table-striped">
+                              <colgroup>
+                                <col width="40px"/>
+                                <col width="*"/>
+                                <col width="100px"/>
+                                <col width="200px"/>
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>no</th>
+                                  <th>메뉴</th>
+                                  <th>수량</th>
+                                  <th>가격</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              </tbody>
+                              </tbody>
+
+                            </table>
+                          </div>
+                          <p>
+                            <button type="button" class="btn btn-warning btn-lg" data-dismiss="modal">취소</button>
+                          </p>
+                          <div class="totalsheet-wrap">
+                            <table class="table totalsheet">
+                              <tr>
+                                <th>총 주문 수량</th>
+                                <td>1개</td>
+                                <th>총 결제 금액</th>
+                                <td>4500원</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                              <button type="button" class="btn btn-default" onclick="location.href='pay.html'">
+                                <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                                매장식사
+                              </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                              <button type="button" class="btn btn-default" onclick="location.href='pay.html'">
+                                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                포장
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="option-btn">선택 완료</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $("#pay-btn").click(function(){
+
+      $('#orderformmodal').modal('show');
+      $('#orderformmodal .ordersheet-wrap table#tblorder tbody .input-group button').css({
+        'display':'none'
+      })
+      $('#orderformmodal .ordersheet-wrap table#tblorder tbody .input-group input').css({
+        'box-shadow':'none',
+        'border':'0',
+        'background':'none'
+      })
+      $('#orderformmodal .ordersheet-wrap table#tblorder tbody td#del').attr('rowspan','1')
+
+
+    })
+  })
+
+  </script>
+
+
+
+
+
+
+</section>
+<footer>
+  <div id="footer">
+    <div class="content">
+      <p class="copyright">SUBWAY® is a Registered Trademark of Subway IP Inc.© 2018 Subway IP Inc.All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+</html>

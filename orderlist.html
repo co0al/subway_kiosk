@@ -1,0 +1,64 @@
+<form action="">
+  <table id="tblorder" class="table table-striped">
+    <colgroup>
+      <col width="40px"/>
+      <col width="*"/>
+      <col width="100px"/>
+      <col width="70px"/>
+      <col width="60px"/>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>no</th>
+        <th>메뉴</th>
+        <th>수량</th>
+        <th>가격</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td id="menu">더블 초코칩 쿠키</td>
+        <td>
+          <div class="center">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button id="qty-minus" type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                </button>
+              </span>
+              <input id="CC-prodDetails-quantity" type="text" name="quant" class="form-control input-number" value="1" min="1" max="100">
+              <span class="input-group-btn">
+                <button id="qty-plus" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td id="price"></td>
+        <td id="del" rowspan="2">
+          <div class="input-group">
+            <button id="del-btn" type="button" class="btn btn-default" data-type="del" data-field="">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>1-OP</td>
+        <td colspan="3" id="option">옵션선택해당없음</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<div class="pagging">
+  <nav>
+    <ul class="pager">
+      <li><a href=""><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li>
+      <li><a href=""><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a></li>
+    </ul>
+  </nav>
+</div>
